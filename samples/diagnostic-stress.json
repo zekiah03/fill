@@ -1,0 +1,73 @@
+{
+  "type": "diagnostic",
+  "title": "ストレスチェック",
+  "description": "最近2週間の状態を選んでください。",
+  "icon": "🧠",
+  "questions": [
+    {
+      "text": "仕事量が多すぎると感じることがある",
+      "options": [
+        { "label": "まったくない",   "score": 0 },
+        { "label": "たまにある",     "score": 1 },
+        { "label": "よくある",       "score": 2 },
+        { "label": "いつもある",     "score": 3 }
+      ]
+    },
+    {
+      "text": "睡眠が十分に取れていると感じる",
+      "options": [
+        { "label": "いつもそう",       "score": 0 },
+        { "label": "だいたいそう",     "score": 1 },
+        { "label": "あまりそうでない", "score": 2 },
+        { "label": "まったくそうでない", "score": 3 }
+      ]
+    },
+    {
+      "text": "気分が落ち込んだり、憂うつになることがある",
+      "options": [
+        { "label": "まったくない", "score": 0 },
+        { "label": "たまにある",   "score": 1 },
+        { "label": "よくある",     "score": 2 },
+        { "label": "いつもある",   "score": 3 }
+      ]
+    },
+    {
+      "text": "仕事でやりがいを感じることがある",
+      "options": [
+        { "label": "いつもある",   "score": 0 },
+        { "label": "よくある",     "score": 1 },
+        { "label": "たまにある",   "score": 2 },
+        { "label": "まったくない", "score": 3 }
+      ]
+    },
+    {
+      "text": "身体的な疲労感がある",
+      "options": [
+        { "label": "まったくない", "score": 0 },
+        { "label": "たまにある",   "score": 1 },
+        { "label": "よくある",     "score": 2 },
+        { "label": "いつもある",   "score": 3 }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "maxScore": 4,
+      "label": "良好",
+      "color": "#34c98b",
+      "description": "ストレスは低い状態です。この調子で生活リズムを保ちましょう。"
+    },
+    {
+      "maxScore": 9,
+      "label": "注意",
+      "color": "#f7a04f",
+      "description": "軽度のストレスが見られます。休息や気分転換を意識してみてください。"
+    },
+    {
+      "maxScore": 15,
+      "label": "要注意",
+      "color": "#f25c5c",
+      "description": "ストレスが高い状態です。信頼できる人への相談や専門家への受診を検討してください。"
+    }
+  ]
+}

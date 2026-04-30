@@ -1,0 +1,73 @@
+{
+  "type": "diagnostic",
+  "title": "プログラミングスキル診断",
+  "description": "あなたのスキルレベルを自己評価してください。",
+  "icon": "💻",
+  "questions": [
+    {
+      "text": "変数・関数・ループなどの基本構文を理解している",
+      "options": [
+        { "label": "まだ学習中",         "score": 0 },
+        { "label": "基本はわかる",       "score": 1 },
+        { "label": "しっかり理解している", "score": 2 },
+        { "label": "他者に教えられる",   "score": 3 }
+      ]
+    },
+    {
+      "text": "オブジェクト指向プログラミング（OOP）を理解している",
+      "options": [
+        { "label": "よく知らない",       "score": 0 },
+        { "label": "概念は知っている",   "score": 1 },
+        { "label": "実装に使える",       "score": 2 },
+        { "label": "設計レベルで活用できる", "score": 3 }
+      ]
+    },
+    {
+      "text": "バージョン管理（Git）を日常的に使っている",
+      "options": [
+        { "label": "使っていない",       "score": 0 },
+        { "label": "基本操作は知っている", "score": 1 },
+        { "label": "ブランチ・マージを使う", "score": 2 },
+        { "label": "チーム開発に活用している", "score": 3 }
+      ]
+    },
+    {
+      "text": "データベース（SQL）を扱える",
+      "options": [
+        { "label": "ほぼわからない",     "score": 0 },
+        { "label": "SELECT文は書ける",   "score": 1 },
+        { "label": "JOIN・サブクエリを使える", "score": 2 },
+        { "label": "設計・最適化もできる", "score": 3 }
+      ]
+    },
+    {
+      "text": "テストコード（ユニットテスト等）を書いている",
+      "options": [
+        { "label": "書いたことがない",   "score": 0 },
+        { "label": "書いたことはある",   "score": 1 },
+        { "label": "日常的に書いている", "score": 2 },
+        { "label": "TDD・CI/CDも実践中", "score": 3 }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "maxScore": 5,
+      "label": "初級",
+      "color": "#4f8ef7",
+      "description": "基礎を固める段階です。まずは簡単なプロジェクトを作りながら学習を続けましょう。"
+    },
+    {
+      "maxScore": 10,
+      "label": "中級",
+      "color": "#f7a04f",
+      "description": "基本は習得できています。実務レベルに向けてさらに経験を積みましょう。"
+    },
+    {
+      "maxScore": 15,
+      "label": "上級",
+      "color": "#34c98b",
+      "description": "幅広いスキルを持っています。設計・アーキテクチャの深化を目指しましょう。"
+    }
+  ]
+}

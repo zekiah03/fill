@@ -1,0 +1,51 @@
+{
+  "type": "record",
+  "title": "トレーニングログ",
+  "description": "運動・トレーニングの記録を残します。",
+  "icon": "💪",
+  "fields": [
+    {
+      "key": "date",
+      "label": "日付",
+      "type": "date",
+      "required": true
+    },
+    {
+      "key": "exercise_type",
+      "label": "種目",
+      "type": "select",
+      "required": true,
+      "options": ["ランニング", "筋トレ", "水泳", "サイクリング", "ヨガ", "ウォーキング", "その他"]
+    },
+    {
+      "key": "duration",
+      "label": "時間 (分)",
+      "type": "number",
+      "required": true,
+      "min": 1,
+      "max": 300
+    },
+    {
+      "key": "intensity",
+      "label": "強度",
+      "type": "radio",
+      "required": true,
+      "options": ["軽め", "普通", "ハード", "超ハード"]
+    },
+    {
+      "key": "satisfaction",
+      "label": "達成感",
+      "type": "range",
+      "required": false,
+      "min": 1,
+      "max": 5
+    },
+    {
+      "key": "notes",
+      "label": "メモ",
+      "type": "textarea",
+      "required": false,
+      "hint": "セット数・距離・気づきなど自由に記録"
+    }
+  ]
+}

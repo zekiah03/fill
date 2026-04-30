@@ -1,0 +1,53 @@
+{
+  "type": "record",
+  "title": "体調記録",
+  "description": "毎日の体調をログします。",
+  "icon": "📊",
+  "fields": [
+    {
+      "key": "date",
+      "label": "日付",
+      "type": "date",
+      "required": true
+    },
+    {
+      "key": "mood",
+      "label": "気分",
+      "type": "select",
+      "required": true,
+      "options": ["とても良い", "良い", "普通", "悪い", "とても悪い"]
+    },
+    {
+      "key": "sleep_hours",
+      "label": "睡眠時間 (h)",
+      "type": "number",
+      "required": true,
+      "min": 0,
+      "max": 24,
+      "step": 0.5,
+      "hint": "昨夜の睡眠時間を入力してください"
+    },
+    {
+      "key": "energy",
+      "label": "エネルギーレベル",
+      "type": "range",
+      "required": false,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "key": "symptoms",
+      "label": "症状",
+      "type": "checkbox",
+      "required": false,
+      "options": ["頭痛", "疲労感", "食欲不振", "肩こり", "眼精疲労"]
+    },
+    {
+      "key": "memo",
+      "label": "メモ",
+      "type": "textarea",
+      "required": false,
+      "hint": "自由に記録できます"
+    }
+  ]
+}

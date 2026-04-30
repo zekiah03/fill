@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>統合アプリプラットフォーム</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <h1 class="logo">AppHub</h1>
+        <p class="logo-sub">統合アプリプラットフォーム</p>
+      </div>
+
+      <div class="sidebar-section">
+        <label class="upload-btn" for="json-upload">
+          <span class="icon">＋</span> JSONを読み込む
+          <input type="file" id="json-upload" accept=".json" multiple hidden />
+        </label>
+      </div>
+
+      <div class="sidebar-section">
+        <p class="section-label">読み込み済みアプリ</p>
+        <ul id="app-list" class="app-list">
+          <li class="app-list-empty">JSONファイルを読み込んでください</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <p class="section-label">サンプル</p>
+        <button class="sample-btn" data-sample="diagnostic">診断アプリのサンプル</button>
+        <button class="sample-btn" data-sample="record">記録アプリのサンプル</button>
+      </div>
+    </nav>
+
+    <main class="main">
+      <div id="welcome" class="welcome">
+        <div class="welcome-icon">📋</div>
+        <h2>統合アプリプラットフォーム</h2>
+        <p>左のサイドバーからJSONファイルを読み込んでアプリを起動できます。</p>
+        <div class="welcome-cards">
+          <div class="card">
+            <div class="card-icon">🔍</div>
+            <h3>診断アプリ</h3>
+            <p>質問・選択肢・スコアリングをJSONで定義。ストレスチェック、性格診断、スキル評価などに対応。</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📝</div>
+            <h3>記録アプリ</h3>
+            <p>フォームフィールドをJSONで定義。日報、体調記録、トレーニングログなどに対応。</p>
+          </div>
+        </div>
+        <p class="hint">サイドバーの「サンプル」ボタンでデモをお試しください。</p>
+      </div>
+
+      <div id="app-container" class="app-container hidden"></div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
