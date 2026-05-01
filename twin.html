@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>デジタルツイン統合ダッシュボード</title>
+  <link rel="stylesheet" href="twin.css" />
+</head>
+<body>
+<div id="app">
+
+  <header class="header">
+    <div class="header-brand">
+      <span class="brand-icon">🧬</span>
+      <div>
+        <div class="brand-title">デジタルツイン統合</div>
+        <div class="brand-sub">複数ソースから人物モデルを構築</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <div class="comp-widget">
+        <span id="comp-text">完成度 0 / 8</span>
+        <div class="comp-track"><div class="comp-fill" id="comp-fill"></div></div>
+        <span id="comp-pct" class="comp-pct">0%</span>
+      </div>
+      <label class="btn btn-primary" for="file-input">
+        ＋ JSON読み込み
+        <input type="file" id="file-input" accept=".json" multiple hidden />
+      </label>
+      <button class="btn btn-outline" id="export-btn">エクスポート</button>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="sidebar-title">読み込み済みソース</div>
+      <div id="sources-list">
+        <div class="empty-sources">JSONを読み込んでください</div>
+      </div>
+
+      <div class="sidebar-title" style="margin-top:24px">データ対応表</div>
+      <ul class="smap-list" id="source-map-list"></ul>
+
+      <div class="sidebar-title" style="margin-top:24px">対応アプリ一覧</div>
+      <div class="app-links">
+        <a class="app-link" href="https://gap-steel.vercel.app/" target="_blank">gap（欲求診断）</a>
+        <a class="app-link" href="https://a-irobot.vercel.app/" target="_blank">AIrobot（ルール）</a>
+        <a class="app-link" href="https://prism-solnova.vercel.app/" target="_blank">Prism</a>
+        <a class="app-link" href="https://valuse.vercel.app/" target="_blank">価値観</a>
+        <a class="app-link" href="https://evolve-five-gamma.vercel.app/" target="_blank">進化診断</a>
+        <a class="app-link" href="https://v0-life-tracker-i321ccks6-zekiahandales-6710s-projects.vercel.app/" target="_blank">健康管理</a>
+        <a class="app-link" href="https://whoyournot.vercel.app/" target="_blank">わたしの定義</a>
+        <a class="app-link" href="https://pazst.vercel.app/" target="_blank">Past Inference</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div id="insights" class="insights-section hidden"></div>
+      <div class="twin-grid" id="twin-grid"></div>
+    </main>
+
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+<script src="twin.js"></script>
+</body>
+</html>
